@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>cartoon</title>
+<style type="text/css">
+	.boxt{ width:400px; background-color:#CCC; margin-left:auto; margin-right:auto; opacity:0.4;}
+	.boxt h5{ background-color:#ddd; padding:10px;}
+	.boxt p{ padding:0px 10px 10px 10px; line-height:28px;}
+	body{ background:url(ceshi.png);}
+	
+	.box1,.box2,.box3{ position:absolute; width:10px; height:10px; background-color:yellow;}
+	.box1{top:150px; left:820px;}
+	.box2{top:250px; left:420px;}
+	.box3{top:450px; left:720px;}
+	
+	
+	.ts_box{ width:240px; padding:1px 1px 1px 10px; background-color:#F93; position:absolute; display:none;}
+	.ts_box .nrct{ padding:6px; margin:4px;}
+	.ts_box a{ display:block; padding:4px; background:#C03; color:#fff; position:absolute;}
+	.ts_box a.prv{ bottom:4px; right:80px;}
+	.ts_box a.nxt{ bottom:4px; right:4px;}
+	
+	.bgred{ background-color:#900;}
+	
+</style>
+<script type="text/javascript" src="jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="jquery.ts.js"></script>
+</head>
+
+<body>
+<div class="boxt">
+	<h5>内容</h5>
+    <p>
+    	说明文档：
+    </p>
+</div>
+<div class="box1" title="bba">1</div><div class="box2" title="bbb">3</div><div class="box3" title="bbc">4</div>
+
+<div class="ts_box" id="bba">
+	<div class="nrct">PHPCMS V9（后面简称V9）采用PHP5+MYSQL做为技术基础进行开发。V9采用OOP（面向对象）方式进行基础运行框架搭建。模块化开发方式做为功能开发形式。框架易于功能扩展，代码维护，优秀的二次开发能力，可满足所有网站的应用需求。 个人站长所认可。 
+    </div>
+	<div class="txt"><a href="#" title="text" class="nxt">下一步</a></div>
+</div>
+<div class="ts_box" id="bbb">
+	<div class="nrct">PHPCMS V9（后面简称V9）采用PHP5+MYSQL做为技术基础进行开发。V9采用OOP（面向对象）方式进行基础运行框架搭建。模块化开发方式做为功能开发形式。框架易于功能扩展，代码维护，优秀的二次开发能力，可满足所有网站的应用需求。 5年开发经验的优秀团队，在掌握了丰富的WEB开发经验和CMS产品开发经验的同时，勇于创新追求完美的设计理念，为全球多达10万网站提供助力，并被更多的政府机构、教育机构、事业单位、商业企业、个人站长所认可。 
+    </div>
+	<a href="#" title="text" class="prv">上一步</a><a href="#" title="text" class="nxt">下一步</a>
+</div>
+<div class="ts_box" id="bbc">
+	<div class="nrct">PHPCMS V9（后面简称V9）采用PHP5+MYSQL做为技术基础进行开发。V9采用OOP（面向对象）方式进行基础运行框架搭建。模块化开发方式做为功能开发形式。框架易于功能扩展，代码维护，优秀的二次开发能力，可满足所有网站的应用需求。 5年开发经验的优秀团队，在掌握了丰富的WEB开发经验和CMS产品开发经验的同时，勇于创新追求完美的设计理念，为全球多达10万网站提供助力，并被更多的政府机构、教育机构、事业单位、商业企业、个人站长所认可。 
+    </div>
+	<a href="#" title="text" class="prv">上一步</a><a href="#" title="text" class="nxt">关闭</a>
+</div>
+<script>
+	$(document).ready(function(e) {
+        $("#bba,#bbb,#bbc").ts();
+    });
+</script>
+</body>
+</html>
